@@ -135,7 +135,6 @@ arsenal = "building" createVehicleLocal [0,0,0];
 
 //Variables
 private _aceMedLoaded = !(isNil "ace_medical_engine"); //Store whether ace med is present
-missionNamespace setVariable ['mjb_arsenal_active',true];
 
 //private _winter = false; // true to enable winter camo
 //private _enableCBRN = false;
@@ -323,6 +322,37 @@ private _itemEquipment =
     "CUP_H_HIL_HelmetACH_GCovered_Headset_TTS",
     "CUP_H_USArmy_HelmetACH_GCOVERED_Headset_UCP",
 
+    "CUP_H_USArmy_Helmet_ECH2_Black",
+    "CUP_H_USArmy_Helmet_ECH1_Black",
+    "CUP_H_USArmy_Helmet_ECH2_GREEN",
+    "CUP_H_USArmy_Helmet_ECH1_Green",
+    "CUP_H_USArmy_ECH_MARPAT_des",
+    "CUP_H_USArmy_ECH_GCOVEREDMARPAT_des",
+    "CUP_H_USArmy_ECH_GCOVERED_Headset_MARPAT_des",
+    "CUP_H_USArmy_ECH_ESS_MARPAT_des",
+    "CUP_H_USArmy_ECH_ESS_Headset_MARPAT_des",
+    "CUP_H_USArmy_ECH_Headset_MARPAT_des",
+    "CUP_H_USArmy_ECH_GCOVERED_MARPAT",
+    "CUP_H_USArmy_ECH_MARPAT",
+    "CUP_H_USArmy_ECH_GCOVERED_Headset_MARPAT",
+    "CUP_H_USArmy_ECH_ESS_MARPAT",
+    "CUP_H_USArmy_ECH_ESS_Headset_MARPAT",
+    "CUP_H_USArmy_ECH_Headset_MARPAT",
+
+    "CUP_H_CDF_H_PASGT_SNW",
+    "CUP_H_PASGTv2_DCU",
+    "CUP_H_PASGTv2_desert",
+    "CUP_H_PASGTv2_ERDL_highland",
+    "CUP_H_PASGTv2_ERDL_lowland",
+    "CUP_H_PASGTv2_WDL_CF",
+    "CUP_H_PASGTv2_WDL_GG",
+    "CUP_H_PASGTv2_WDL",
+    "CUP_H_PASGTv2_OD",
+    "CUP_H_PASGTv2_TPattern",
+    "CUP_H_PASGTv2_tigerstripe",
+    "CUP_H_PASGTv2_Urban",
+    "CUP_H_PASGTv2_winter",
+
     "H_HelmetB_Enh_tna_F",
     "H_HelmetSpecB",
     "H_HelmetSpecB_blk",
@@ -480,14 +510,6 @@ private _itemUniforms = [
     "CUP_U_C_Tracksuit_02",
     "CUP_U_C_Tracksuit_03",
     "CUP_U_C_Tracksuit_04",
-
-    // JCA NBCD Suits
-    "JCA_U_NBCD_Suit_01_black_F",
-    "JCA_U_NBCD_Suit_01_hood_black_F",
-    "JCA_U_NBCD_Suit_01_olive_F",
-    "JCA_U_NBCD_Suit_01_hood_olive_F",
-    "JCA_U_NBCD_Suit_01_sand_F",
-    "JCA_U_NBCD_Suit_01_hood_sand_F",
 
 	// Various CUP Uniforms
 	"CUP_U_B_USMC_MCCUU_des_pads_gloves",
@@ -1454,16 +1476,6 @@ private _itemWeaponRifle =
 	"CUP_arifle_HK416_Wood",
     "rhs_weap_hk416d145",
 
-    "CUP_arifle_Mk17_STD_FG",
-    "CUP_arifle_Mk17_STD_FG_black",
-    "CUP_arifle_Mk17_STD_FG_woodland",
-    "CUP_arifle_Mk17_STD_AFG",
-    "CUP_arifle_Mk17_STD_AFG_black",
-    "CUP_arifle_Mk17_STD_AFG_woodland",
-    "CUP_arifle_Mk17_STD_SFG",
-    "CUP_arifle_Mk17_STD_SFG_black",
-    "CUP_arifle_Mk17_STD_SFG_woodland",
-
     "Tier1_HK416D145_MW13_CTR",
 
 	"CUP_arifle_M4A1_SOMMOD_black",
@@ -1504,6 +1516,16 @@ private _itemWeaponRifle =
     //============================================================
     "CUP_arifle_Fort222",
     "CUP_arifle_AK74",
+
+    "CUP_arifle_AK103_railed",
+    "CUP_arifle_AK104_railed",
+    "CUP_arifle_AK109_railed",
+    "CUP_30Rnd_545x39_AK74M_M",
+    "CUP_arifle_AKS74U_railed",
+    "CUP_arifle_AKMN_railed_afg",
+    "CUP_arifle_AKMN_railed",
+    "CUP_arifle_AK74M_railed_afg_camo",
+    "CUP_arifle_AK74M_railed_afg",
 	
 	"CUP_arifle_AK74M_top_rail",
     "rhs_weap_ak74m",
@@ -2550,10 +2572,7 @@ private _itemWeaponSharpshooter =
     //============================================================
     //7.62x51mm
     "srifle_DMR_01_F",
-    
-    "CUP_arifle_Mk20",
-    "CUP_arifle_Mk20_black",
-    "CUP_arifle_Mk20_woodland",
+
     "CUP_srifle_L129A1",
     "CUP_srifle_L129A1_ctrg",
     "CUP_srifle_L129A1_ctrgt",
@@ -2839,9 +2858,6 @@ private _itemWeaponGL =
     "CUP_arifle_Mk17_CQC_EGLM",
     "CUP_arifle_Mk17_CQC_EGLM_black",
     "CUP_arifle_Mk17_CQC_EGLM_woodland",
-    "CUP_arifle_Mk17_STD_EGLM",
-    "CUP_arifle_Mk17_STD_EGLM_black",
-    "CUP_arifle_Mk17_STD_EGLM_woodland",
 
     "CUP_arifle_ACR_EGLM_blk_68",
     "CUP_arifle_ACR_EGLM_snw_68",
@@ -2875,10 +2891,10 @@ private _itemWeaponGL =
 	"mjb_1Rnd_impactSmonk",
 	"mjb_1Rnd_impactSmonkBlue",
 	"mjb_1Rnd_impactSmonkGreen",
-	"mjb_1Rnd_impactSmonkOrange",
-	"mjb_1Rnd_impactSmonkPurple",
+	//"mjb_1Rnd_impactSmonkOrange",
+	//"mjb_1Rnd_impactSmonkPurple",
 	"mjb_1Rnd_impactSmonkRed",
-	"mjb_1Rnd_impactSmonkYellow",
+	//"mjb_1Rnd_impactSmonkYellow",
 
 	"CUP_1Rnd_HEDP_M203",
 	"rhs_mag_M433_HEDP",
@@ -2926,7 +2942,6 @@ private _itemWeaponLAT =
     "CUP_launch_RPG26",
 
     "mjb_launch_M72A10",
-	"CUP_launch_RShG2",
 
     //"CUP_launch_MAAWS",
     //"cup_optic_maaws_scope",
@@ -3626,6 +3641,11 @@ if !(_hasLoW) then {
 
 if (_hasContact) then {
     {_x append [
+        "V_CarrierRigKBT_01_heavy_EAF_F",
+        "V_CarrierRigKBT_01_light_EAF_F",
+        "V_CarrierRigKBT_01_EAF_F",
+        "H_HelmetHBK_headset_F",
+        "H_HelmetHBK_F",
         "U_I_E_Uniform_01_officer_F",
         "U_I_E_Uniform_01_F",
         "U_I_E_Uniform_01_shortsleeve_F",
@@ -3706,17 +3726,6 @@ if (_hasContact) then {
 };
 
 if (!_enableCBRN) then {
-
-	{_x = _x - [
-		// JCA NBCD Suits
-		"JCA_U_NBCD_Suit_01_black_F",
-		"JCA_U_NBCD_Suit_01_hood_black_F",
-		"JCA_U_NBCD_Suit_01_olive_F",
-		"JCA_U_NBCD_Suit_01_hood_olive_F",
-		"JCA_U_NBCD_Suit_01_sand_F",
-		"JCA_U_NBCD_Suit_01_hood_sand_F"
-	]} forEach [_itemUniforms,_itemTankCrew,_itemHeloCrew];
-
     _itemFacewear = _itemFacewear - [
 		"JCA_G_AirPurifyingRespirator_03_black_clear_F",
 		"JCA_G_AirPurifyingRespirator_03_black_tinted_F",
@@ -3790,7 +3799,6 @@ private _leaderRole = ["tl","sl","B_officer_F","B_Soldier_SL_F"];
 
 if (_unitRole in (["sfsl","sfar","sfaar","sfmed","sfmat","sfdmr","sniper","spotter","aircrew"] )) then { _itemMod append _itemSuppressor}; //append _leaderRole
 
-private _grp = group player;
 //Match unitrole name with the classnames in loadout.
 switch (true) do
 {
@@ -3820,6 +3828,7 @@ switch (true) do
     };
     case (_unitRole in ["mat","B_Soldier_LAT_F"]) : // for old missions, will be wrong without tmf role
     {
+		private _grp = group player;
 		if (count units _grp > 3 && {leader _grp isNotEqualTo player}) then {_itemLeaderEquipment = []; _itemSpecial = _itemSpecial - ["ACRE_PRC148","ACRE_PRC152","ACRE_PRC117F"]};
         [arsenal, (_itemEquipment + _itemSpecial + _itemFacewear + _itemWeaponMAT + _itemMod + _itemReflexSight +  _itemWeaponCQB +  _itemWeaponRifle + _itemWeaponCarbine + _itemWeaponPistol + _itemWeaponAmmo + _itemWeaponTracerAmmo + _itemAmmoMAT + _itemLeaderEquipment + _itemPackMedium + _tarkovuniforms)] call ace_arsenal_fnc_initBox;
     };
@@ -3852,14 +3861,14 @@ switch (true) do
     };
         case (_unitRole in ["sfmed","B_recon_medic_F"]) :
     {
-        [arsenal, (_itemEquipment + _itemFacewear + _itemWeaponLAT + _itemAmmoLAT + _itemWeaponCQB + _itemSpecial + _itemWeaponARAmmo + _itemWeaponHighCapAmmo + _itemAmmoMAT + _itemMedic + ["mjb_carryallplus_oucamo"] + _itemMod + _itemReflexSight + _itemWeaponRifle + _itemWeaponCarbine + _itemWeaponPistol + _itemWeaponAmmo + _itemWeaponTracerAmmo +  _itemSF + _tarkovuniforms)] call ace_arsenal_fnc_initBox;
+        [arsenal, (_itemEquipment + _itemFacewear + _itemWeaponLAT + _itemWeaponRLAT + _itemAmmoLAT + _itemWeaponCQB + _itemSpecial + _itemWeaponARAmmo + _itemWeaponHighCapAmmo + _itemAmmoMAT + _itemMedic + ["mjb_carryallplus_oucamo"] + _itemMod + _itemReflexSight + _itemWeaponRifle + _itemWeaponCarbine + _itemWeaponPistol + _itemWeaponAmmo + _itemWeaponTracerAmmo +  _itemSF + _tarkovuniforms)] call ace_arsenal_fnc_initBox;
 
         player setUnitTrait ["Medic", true];
         player setVariable ["ace_medical_medicClass", 2, true];
     };
         case (_unitRole in ["sfmat","B_recon_LAT_F"]) :
     {
-        [arsenal, (_itemEquipment + _itemFacewear + _itemWeaponLAT + _itemAmmoLAT + _itemWeaponCQB + _itemSpecial + _itemWeaponARAmmo + _itemWeaponHighCapAmmo + _itemWeaponSFMAT + _itemAmmoMAT + _itemPackMedium + _itemMod + _itemReflexSight + _itemWeaponRifle + _itemWeaponCarbine + _itemWeaponPistol + _itemWeaponAmmo + _itemWeaponTracerAmmo +  _itemSF + _tarkovuniforms)] call ace_arsenal_fnc_initBox;
+        [arsenal, (_itemEquipment + _itemFacewear + _itemWeaponLAT + _itemWeaponRLAT + _itemAmmoLAT + _itemWeaponCQB + _itemSpecial + _itemWeaponARAmmo + _itemWeaponHighCapAmmo + _itemWeaponSFMAT + _itemAmmoMAT + _itemPackMedium + _itemMod + _itemReflexSight + _itemWeaponRifle + _itemWeaponCarbine + _itemWeaponPistol + _itemWeaponAmmo + _itemWeaponTracerAmmo +  _itemSF + _tarkovuniforms)] call ace_arsenal_fnc_initBox;
 
         player setUnitTrait ["Medic", true];
     };
